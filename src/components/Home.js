@@ -1,12 +1,20 @@
 import styled from 'styled-components';
+import FeatureFilms from './FeatureFilms';
 import ImgSlider from './ImgSlider';
+import MotionGraphics from './MotionGraphics';
+import ShortFilms from './ShortFilms';
 import Viewers from './Viewers';
+import WebApps from './WebApps';
 
 const Home = (props) => {
   return (
   <Container>
      <ImgSlider />
      <Viewers />
+     <MotionGraphics />
+     <FeatureFilms />
+     <ShortFilms />
+     <WebApps />
   </Container>
   );
 };
