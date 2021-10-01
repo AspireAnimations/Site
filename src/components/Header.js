@@ -7,7 +7,8 @@ import { auth, provider } from '../firebase'
 import {
   selectUserName,
   selectUserPhoto,
-  setUserLoginDetails
+  setUserLoginDetails,
+  setSignOutState,
 } from "../features/user/userSlice";
 
 const Header = (props) => {
@@ -25,13 +26,26 @@ const Header = (props) => {
     })
   }, [userName]);
 
+
   const handleAuth = () => {
-    auth.signInWithPopup(provider)
-    .then((result) => {
-      setUser(result.user);
-    }).catch((error) => {
-      alert(error.message)
-    });
+    if (!userName) {
+      auth
+        .signInWithPopup(provider)
+        .then((result) => {
+          setUser(result.user);
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    } else if (userName) {
+      auth
+        .signOut()
+        .then(() => {
+          dispatch(setSignOutState());
+          history.push("/");
+        })
+        .catch((err) => alert(err.message));
+    }
   };
 
   const setUser = (user) => {
@@ -85,7 +99,7 @@ const Header = (props) => {
       <SignOut>
       <UserImg src={userPhoto} alt={userName} />
       <DropDown>
-        <span onClick={handleAuth}>Sing Out</span>
+      <span onClick={handleAuth}>Sing out</span>
       </DropDown>
       </SignOut>
       </>
@@ -221,11 +235,31 @@ box-shadow: rbg(0 0 0 / 50%) 0px 0px 18px 0px;
 padding: 10px;
 font-size: 14px;
 letter-spacing: 3px;
+width: 100px;
 opacity: 0;
 `;
 
 const SignOut = styled.div`
+position: relative;
+height: 48px;
+width: 48px;
+display: flex;
+cursor: pointer;
+align-items: center;
+justify-items: center;
 
+${UserImg} {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+&:hover {
+  ${DropDown} {
+    opacity: 1;
+    transition-duration: 1s;
+  }
+}
 `;
 
 
