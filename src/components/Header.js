@@ -125,9 +125,9 @@ const Nav = styled.nav`
 
 const Logo = styled.a`
   padding: 0;
-  width: 140px;
-  margin-top: 2px;
-  max-height: 130px;
+  width: 130px;
+  margin-top: 4px 0;
+  max-height: 120px;
   font-size: 0;
   display: inline-block;
 
@@ -197,9 +197,9 @@ const NavMenu = styled.div`
     }
   }
 
-  /* @media (max-width: 768px) {
+  @media (max-width: 768px) {
     display: none;
-  } */
+  }
 `;
 
 const Login = styled.a`
