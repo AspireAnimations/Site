@@ -1,6 +1,8 @@
 import React from 'react'
+import { useEffect } from 'react';
 import styled from 'styled-components'
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { auth, provider } from '../firebase'
 import {
   selectUserName,
@@ -10,8 +12,18 @@ import {
 
 const Header = (props) => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const userName = useSelector(selectUserName);
   const userPhoto = useSelector(selectUserPhoto);
+
+  useEffect(() => {
+    auth.onAuthStateChanged(async (user) => {
+      if(user) {
+        setUser(user)
+        history.push('/home')
+      }
+    })
+  }, [userName]);
 
   const handleAuth = () => {
     auth.signInWithPopup(provider)
@@ -35,7 +47,7 @@ const Header = (props) => {
   return (
     <Nav>
       <Logo>
-        <img src="/images/logo.svg" alt="Aspire" />
+        <img src="/images/logo.png" alt="Aspire" />
       </Logo>
 
       {!userName ? (
@@ -70,7 +82,12 @@ const Header = (props) => {
         </a>
         
       </NavMenu>
+      <SignOut>
       <UserImg src={userPhoto} alt={userName} />
+      <DropDown>
+        <span onClick={handleAuth}>Sing Out</span>
+      </DropDown>
+      </SignOut>
       </>
       )}
     </Nav>
@@ -94,9 +111,9 @@ const Nav = styled.nav`
 
 const Logo = styled.a`
   padding: 0;
-  width: 80px;
-  margin-top: 4px;
-  max-height: 70px;
+  width: 140px;
+  margin-top: 2px;
+  max-height: 130px;
   font-size: 0;
   display: inline-block;
 
@@ -192,6 +209,25 @@ transition: all 0.2s  ease 0s;
 const UserImg = styled.img`
  height: 100%;
 `;
+
+const DropDown = styled.div`
+position: absolute;
+top: 48px;
+right: 0px;
+background: rgb(19, 19, 19);
+border: 1px solid rgba(151, 151, 151,0.34);
+border-radius: 4px;
+box-shadow: rbg(0 0 0 / 50%) 0px 0px 18px 0px;
+padding: 10px;
+font-size: 14px;
+letter-spacing: 3px;
+opacity: 0;
+`;
+
+const SignOut = styled.div`
+
+`;
+
 
 
 
