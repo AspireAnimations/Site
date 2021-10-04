@@ -6,7 +6,7 @@ const WebApps = (props) => {
 
   return (
     <Container>
-      <h4>Motion Graphics</h4>
+      <h4>Augmented Reality</h4>
       <Content>
             <Wrap>
               <Link to='/'>
