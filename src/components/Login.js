@@ -7,9 +7,9 @@ const Login = (props) => {
        <Container>
          <Content>
          <CTA>
-           <CTALogoOne src='/images/cta-logo-one.svg'/>
-           <SignUp>GET ALL THERE</SignUp>
-           <Description>Start Ups and New Brands suffer a lot when it comes to the trusted Firms providing 3D/2D Animated Videos, Social Media Handling, SEO, Online Promotions and even Website & Apps Development. We have a huge client base who speaks on our behalf and thus providing you with confidence and reliability.</Description>
+           <CTALogoOne src='/images/cta-logo-one.png'/>
+           <SignUp>LOGIN TO ENTER OUR WORLD!</SignUp>
+           <Description>Everybody has a story to tell and what nicer way to tell your story than in the form of Animation. Whether you are and individual who wants to cenvey a message or you have a brand that needs to showcase its vision, Aspire Animations is for you. </Description>
            <CTALogoTwo src='/images/cta-logo-two.png' />
          </CTA>
            <BgImage />
