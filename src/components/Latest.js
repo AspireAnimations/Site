@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectRecommend } from "../features/movie/movieSlice";
+import { selectLatest } from "../features/movie/movieSlice";
 
-const Recommends = (props) => {
-  const movies = useSelector(selectRecommend);
+const Latest = (props) => {
+  const movies = useSelector(selectLatest);
   console.log(movies, ":🛢️");
 
   return (
@@ -72,4 +72,4 @@ const Wrap = styled.div`
   }
 `;
 
-export default Recommends;
+export default Latest;

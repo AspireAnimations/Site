@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ImgSlider from "./ImgSlider";
 import NewDisney from "./NewDisney";
 import Originals from "./Originals";
-import Recommends from "./Recommends";
+import Latest from "./Latest";
 import Trending from "./Trending";
 import Viewers from "./Viewers";
 import { useEffect } from "react";
@@ -14,7 +14,7 @@ import { selectUserName } from "../features/user/userSlice";
 const Home = (props) => {
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName);
-  let recommends = [];
+  let latest = [];
   let newDisneys = [];
   let originals = [];
   let trending = [];
@@ -23,10 +23,10 @@ const Home = (props) => {
     console.log("hello");
     db.collection("movies").onSnapshot((snapshot) => {
       snapshot.docs.map((doc) => {
-        console.log(recommends);
+        console.log(latest);
         switch (doc.data().type) {
-          case "recommend":
-            recommends = [...recommends, { id: doc.id, ...doc.data() }];
+          case "latest":
+            latest = [...latest, { id: doc.id, ...doc.data() }];
             break;
 
           case "new":
@@ -45,7 +45,7 @@ const Home = (props) => {
 
       dispatch(
         setMovies({
-          recommend: recommends,
+          latest: latest,
           newDisney: newDisneys,
           original: originals,
           trending: trending,
@@ -58,7 +58,7 @@ const Home = (props) => {
     <Container>
       <ImgSlider />
       <Viewers />
-      <Recommends />
+      <Latest />
       <NewDisney />
       <Originals />
       <Trending />
