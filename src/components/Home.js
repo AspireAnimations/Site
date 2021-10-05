@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import ImgSlider from "./ImgSlider";
-import NewDisney from "./NewDisney";
-import Originals from "./Originals";
+import Anime from "./Anime";
+import App from "./App";
 import Latest from "./Latest";
 import Trending from "./Trending";
 import Viewers from "./Viewers";
@@ -15,8 +15,8 @@ const Home = (props) => {
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName);
   let latest = [];
-  let newDisneys = [];
-  let originals = [];
+  let anime = [];
+  let app = [];
   let trending = [];
 
   useEffect(() => {
@@ -29,12 +29,12 @@ const Home = (props) => {
             latest = [...latest, { id: doc.id, ...doc.data() }];
             break;
 
-          case "new":
-            newDisneys = [...newDisneys, { id: doc.id, ...doc.data() }];
+          case "anime":
+            anime = [...anime, { id: doc.id, ...doc.data() }];
             break;
 
           case "original":
-            originals = [...originals, { id: doc.id, ...doc.data() }];
+            app = [...app, { id: doc.id, ...doc.data() }];
             break;
 
           case "trending":
@@ -46,8 +46,8 @@ const Home = (props) => {
       dispatch(
         setMovies({
           latest: latest,
-          newDisney: newDisneys,
-          original: originals,
+          anime: anime,
+          app: app,
           trending: trending,
         })
       );
@@ -59,8 +59,8 @@ const Home = (props) => {
       <ImgSlider />
       <Viewers />
       <Latest />
-      <NewDisney />
-      <Originals />
+      <Anime />
+      <App />
       <Trending />
     </Container>
   );

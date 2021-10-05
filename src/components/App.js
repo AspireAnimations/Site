@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectOriginal } from "../features/movie/movieSlice";
+import { selectApp } from "../features/movie/movieSlice";
 
-const Originals = (props) => {
-  const movies = useSelector(selectOriginal);
+const App = (props) => {
+  const movies = useSelector(selectApp);
 
   return (
     <Container>
-      <h4>Originals</h4>
+      <h4>Wonderful Web Apps</h4>
       <Content>
         {movies &&
           movies.map((movie, key) => (
@@ -69,4 +69,4 @@ const Wrap = styled.div`
   }
 `;
 
-export default Originals;
+export default App;
