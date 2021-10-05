@@ -1,38 +1,29 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { selectRecommend } from "../features/movie/movieSlice";
 
-const FeatureFilms = (props) => {
+const Recommends = (props) => {
+  const movies = useSelector(selectRecommend);
+  console.log(movies, ":🛢️");
 
   return (
     <Container>
-      <h4>Feature Films</h4>
+      <h4>Our Latest Work</h4>
       <Content>
-            <Wrap>
-              <Link to='/'>
-             <img src="https://images.pexels.com/lib/api/flowers.png" alt="" />
-             </Link>
+        {movies &&
+          movies.map((movie, key) => (
+            <Wrap key={key}>
+              {movie.id}
+              <Link to={`/detail/` + movie.id}>
+                <img src={movie.cardImg} alt={movie.title} />
+              </Link>
             </Wrap>
-            <Wrap>
-              <Link to='/'>
-             <img src="https://images.pexels.com/lib/api/flowers.png" alt="" />
-             </Link>
-            </Wrap>
-            <Wrap>
-              <Link to='/'>
-             <img src="https://images.pexels.com/lib/api/flowers.png" alt="" />
-             </Link>
-            </Wrap>
-            <Wrap>
-              <Link to='/'>
-             <img src="https://images.pexels.com/lib/api/flowers.png" alt="" />
-             </Link>
-            </Wrap>
+          ))}
       </Content>
     </Container>
   );
 };
-
 
 const Container = styled.div`
   padding: 0 0 26px;
@@ -81,4 +72,4 @@ const Wrap = styled.div`
   }
 `;
 
-export default FeatureFilms;
+export default Recommends;
