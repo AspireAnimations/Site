@@ -79,10 +79,6 @@ const Header = (props) => {
         <span>ABOUT</span>
         </a>
         <a href="/home">
-          <img src="/images/watchlist-icon.svg" alt="Aspire" />
-        <span>WATCHLIST</span>
-        </a>
-        <a href="/home">
           <img src="/images/original-icon.svg" alt="Aspire" />
         <span>MOTION GRAPHICS</span>
         </a>
@@ -93,6 +89,10 @@ const Header = (props) => {
         <a href="/home">
           <img src="/images/series-icon.svg" alt="Aspire" />
         <span>SHORT FILMS</span>
+        </a>
+        <a href="/home">
+          <img src="/images/watchlist-icon.svg" alt="Aspire" />
+        <span>HIRE US!</span>
         </a>
         
       </NavMenu>

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectTrending } from "../features/movie/movieSlice";
+import { selectCreative } from "../features/movie/movieSlice";
 
-const Trending = (props) => {
-  const movies = useSelector(selectTrending);
+const Creative = (props) => {
+  const movies = useSelector(selectCreative);
 
   return (
     <Container>
@@ -69,4 +69,4 @@ const Wrap = styled.div`
   }
 `;
 
-export default Trending;
+export default Creative;

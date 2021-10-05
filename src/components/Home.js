@@ -3,7 +3,7 @@ import ImgSlider from "./ImgSlider";
 import Anime from "./Anime";
 import App from "./App";
 import Latest from "./Latest";
-import Trending from "./Trending";
+import Creative from "./Creative";
 import Viewers from "./Viewers";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -17,7 +17,7 @@ const Home = (props) => {
   let latest = [];
   let anime = [];
   let app = [];
-  let trending = [];
+  let creative = [];
 
   useEffect(() => {
     console.log("hello");
@@ -33,12 +33,12 @@ const Home = (props) => {
             anime = [...anime, { id: doc.id, ...doc.data() }];
             break;
 
-          case "original":
+          case "app":
             app = [...app, { id: doc.id, ...doc.data() }];
             break;
 
-          case "trending":
-            trending = [...trending, { id: doc.id, ...doc.data() }];
+          case "creative":
+            creative = [...creative, { id: doc.id, ...doc.data() }];
             break;
         }
       });
@@ -48,7 +48,7 @@ const Home = (props) => {
           latest: latest,
           anime: anime,
           app: app,
-          trending: trending,
+          creative: creative,
         })
       );
     });
@@ -61,7 +61,7 @@ const Home = (props) => {
       <Latest />
       <Anime />
       <App />
-      <Trending />
+      <Creative />
     </Container>
   );
 };
