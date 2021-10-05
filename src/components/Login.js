@@ -45,7 +45,7 @@ height: 100%;
 background-position: top;
 background-size: cover;
 background-repeat: no-repeat;
-background-image: url("/images/login-background.jpg");
+background-image: url("/images/login-background.png");
 position: absolute;
 top: 0;
 right: 0;
