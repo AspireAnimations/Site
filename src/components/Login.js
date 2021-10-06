@@ -9,7 +9,7 @@ const Login = (props) => {
          <CTA>
            <CTALogoOne src='/images/cta-logo-one.png'/>
            <SignUp>LOGIN TO ENTER OUR WORLD!</SignUp>
-           <Description>Everybody has a story to tell and what nicer way to tell your story than in the form of Animation. Whether you are and individual who wants to cenvey a message or you have a brand that needs to showcase its vision, Aspire Animations is for you. </Description>
+           <Description>Everybody has a story to tell and what nicer way to tell your story than in the form of Animation. Whether you are and individual who wants to convey a message or you have a brand that needs to showcase its vision? Aspire Animations is for you. </Description>
            <CTALogoTwo src='/images/cta-logo-two.png' />
          </CTA>
            <BgImage />

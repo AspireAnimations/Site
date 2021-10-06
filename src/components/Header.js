@@ -70,30 +70,30 @@ const Header = (props) => {
         <>
 
       <NavMenu>
-        <a href="/home">
+        <Link to="/home">
           <img src="/images/home-icon.svg" alt="Aspire" />
         <span>HOME</span>
-        </a>
-        <a href="/home">
+        </Link>
+        <Link to="/home">
           <img src="/images/search-icon.svg" alt="Aspire" />
         <span>ABOUT</span>
-        </a>
-        <a href="/home">
+        </Link>
+        <Link to="/motion">
           <img src="/images/original-icon.svg" alt="Aspire" />
         <span>MOTION GRAPHICS</span>
-        </a>
-        <a href="/home">
+        </Link>
+        <Link to="/feature">
           <img src="/images/movie-icon.svg" alt="Aspire" />
         <span>FEATURE FILMS</span>
-        </a>
-        <a href="/home">
+        </Link>
+        <Link to="/shortfilms">
           <img src="/images/series-icon.svg" alt="Aspire" />
         <span>SHORT FILMS</span>
-        </a>
-        <a href="/home">
+        </Link>
+        <Link to="/hire">
           <img src="/images/watchlist-icon.svg" alt="Aspire" />
         <span>HIRE US!</span>
-        </a>
+        </Link>
         
       </NavMenu>
       <SignOut>
