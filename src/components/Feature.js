@@ -1,11 +1,27 @@
-import React from 'react'
+import styled from "styled-components";
 
-const Feature = () => {
+const Feature = (props) => {
+  
   return (
-    <div>
-      <h1>Coming Soon</h1>
-    </div>
-  )
-}
+    <Container>
+       <h1>Coming Soon...</h1>
+       <p>Hold On Tight!</p>
+    </Container>
+  );
+};
 
-export default Feature
+const Container = styled.main`
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction : column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  
+  }
+`;
+
+export default Feature;

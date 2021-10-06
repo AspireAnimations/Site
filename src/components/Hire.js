@@ -1,11 +1,27 @@
-import React from 'react'
+import styled from "styled-components";
 
-const Hireus = () => {
+const Hire = (props) => {
+  
   return (
-    <div>
-      <h1>Soon</h1>
-    </div>
-  )
-}
+    <Container>
+       <h1>Coming Soon...</h1>
+       <p>Hold On Tight!</p>
+    </Container>
+  );
+};
 
-export default Hireus
+const Container = styled.main`
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction : column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  
+  }
+`;
+
+export default Hire;

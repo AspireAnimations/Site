@@ -1,11 +1,27 @@
-import React from 'react'
+import styled from "styled-components";
 
-const Motion = () => {
+const Motion = (props) => {
+  
   return (
-    <div>
-      <h1>Coming Soon</h1>
-    </div>
-  )
-}
+    <Container>
+       <h1>Coming Soon...</h1>
+       <p>Hold On Tight!</p>
+    </Container>
+  );
+};
 
-export default Motion
+const Container = styled.main`
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction : column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  
+  }
+`;
+
+export default Motion;

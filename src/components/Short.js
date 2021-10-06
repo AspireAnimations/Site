@@ -1,11 +1,27 @@
-import React from 'react'
+import styled from "styled-components";
 
-const Short = () => {
+const Short = (props) => {
+  
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <Container>
+       <h1>Coming Soon...</h1>
+       <p>Hold On Tight!</p>
+    </Container>
+  );
+};
 
-export default Short
+const Container = styled.main`
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction : column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  
+  }
+`;
+
+export default Short;
