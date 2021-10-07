@@ -4,6 +4,7 @@ import Anime from "./Anime";
 import App from "./App";
 import Latest from "./Latest";
 import Creative from "./Creative";
+import Footer from "./Footer";
 import Viewers from "./Viewers";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -62,6 +63,7 @@ const Home = (props) => {
       <Anime />
       <App />
       <Creative />
+      <Footer />
     </Container>
   );
 };
