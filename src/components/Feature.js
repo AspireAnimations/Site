@@ -5,7 +5,7 @@ const Feature = (props) => {
   return (
     <Container>
        <h1>Coming Soon...</h1>
-       <p>Hold On Tight!</p>
+       <p>Thanks For Visiting!</p>
     </Container>
   );
 };

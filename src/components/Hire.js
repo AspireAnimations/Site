@@ -1,11 +1,10 @@
 import styled from "styled-components";
-
+import Form from "./Form";
 const Hire = (props) => {
   
   return (
     <Container>
-       <h1>Coming Soon...</h1>
-       <p>Hold On Tight!</p>
+       <Form />
     </Container>
   );
 };

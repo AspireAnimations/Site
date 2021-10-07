@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+
 import styled from "styled-components";
 import db from "../firebase";
 
@@ -35,20 +36,21 @@ const Detail = (props) => {
       <ContentMeta>
         <Controls>
           <Player>
-            <img src="/images/play-icon-black.png" alt="" />
-            <span>Play</span>
+            <img src="/images/youtube-icon.png" alt="" />
+            <span>You Tube</span>
           </Player>
           <Trailer>
-            <img src="/images/play-icon-white.png" alt="" />
-            <span>Trailer</span>
+            <img src="/images/hire-icon.png" alt="" />
+            <span>Hire Us</span>
           </Trailer>
           <AddList>
-            <span />
-            <span />
+          <img src="/images/insta-icon.png" alt="" />
           </AddList>
           <GroupWatch>
             <div>
-              <img src="/images/group-icon.png" alt="" />
+            <Link to="/home">
+              <img src="/images/about-icon.png" alt="" />
+              </Link>
             </div>
           </GroupWatch>
         </Controls>
@@ -66,6 +68,7 @@ const Container = styled.div`
   display: block;
   top: 72px;
   padding: 0 calc(3.5vw + 5px);
+
 `;
 
 const Background = styled.div`
@@ -81,7 +84,9 @@ const Background = styled.div`
     height: 100vh;
 
     @media (max-width: 768px) {
-      width: initial;
+      width: 100vw;
+      margin: 16px 0;
+      background-size: cover;
     }
   }
 `;

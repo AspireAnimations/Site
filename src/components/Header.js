@@ -61,7 +61,9 @@ const Header = (props) => {
   return (
     <Nav>
       <Logo>
+        <Link to="/home">
         <img src="/images/logo.png" alt="Aspire" />
+        </Link>
       </Logo>
 
       {!userName ? (
@@ -74,7 +76,7 @@ const Header = (props) => {
           <img src="/images/home-icon.svg" alt="Aspire" />
         <span>HOME</span>
         </Link>
-        <Link to="/home">
+        <Link to="/about">
           <img src="/images/search-icon.svg" alt="Aspire" />
         <span>ABOUT</span>
         </Link>
@@ -86,7 +88,7 @@ const Header = (props) => {
           <img src="/images/movie-icon.svg" alt="Aspire" />
         <span>FEATURE FILMS</span>
         </Link>
-        <Link to="/shortfilms">
+        <Link to="/short">
           <img src="/images/series-icon.svg" alt="Aspire" />
         <span>SHORT FILMS</span>
         </Link>
@@ -134,6 +136,9 @@ const Logo = styled.a`
   img {
     display: block;
     width: 100%;
+  }
+  @media (max-width: 768px) {
+    margin-left: -1.5rem;
   }
 `;
 

@@ -28,7 +28,7 @@ function App() {
           <Route path='/feature'>
             <Feature />
           </Route>
-          <Route path='/shortfilm'>
+          <Route path='/short'>
             <Short />
           </Route>
           <Route path='/hire'>
