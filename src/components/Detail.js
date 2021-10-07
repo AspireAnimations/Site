@@ -35,20 +35,26 @@ const Detail = (props) => {
       </ImageTitle>
       <ContentMeta>
         <Controls>
+        <a  href="https://www.youtube.com/channel/UCty3WgmsYlPH9t5iNg--fuw" target="_blank">
           <Player>
             <img src="/images/youtube-icon.png" alt="" />
             <span>You Tube</span>
           </Player>
+          </a>
+          <Link to="/hire">
           <Trailer>
             <img src="/images/hire-icon.png" alt="" />
             <span>Hire Us</span>
           </Trailer>
+          </Link>
+          <a href="https://www.instagram.com/aspire_animations/" target="_blank">
           <AddList>
           <img src="/images/insta-icon.png" alt="" />
           </AddList>
+          </a>
           <GroupWatch>
             <div>
-            <Link to="/home">
+            <Link to="/about">
               <img src="/images/about-icon.png" alt="" />
               </Link>
             </div>

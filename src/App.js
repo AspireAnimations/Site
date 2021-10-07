@@ -22,6 +22,9 @@ function App() {
           <Route path='/home'>
             <Home />
           </Route>
+          <Route path='/about'>
+            <Home />
+          </Route>
           <Route path='/motion'>
             <Motion />
           </Route>
