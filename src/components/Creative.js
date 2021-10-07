@@ -8,7 +8,7 @@ const Creative = (props) => {
 
   return (
     <Container>
-      <h4>Advertisement Creatives</h4>
+      <h4>Digital Art & Creatives</h4>
       <Content>
         {movies &&
           movies.map((movie, key) => (
