@@ -74,6 +74,7 @@ const Container = styled.div`
   display: block;
   top: 72px;
   padding: 0 calc(3.5vw + 5px);
+  margin-bottom : 20rem;
 
 `;
 

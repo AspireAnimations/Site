@@ -10,7 +10,7 @@ const Hire = (props) => {
 };
 
 const Container = styled.main`
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
   display: flex;

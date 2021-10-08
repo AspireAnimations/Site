@@ -26,6 +26,7 @@ const Creative = (props) => {
 
 const Container = styled.div`
   padding: 0 0 26px;
+  margin-bottom: 4rem;
 `;
 
 const Content = styled.div`

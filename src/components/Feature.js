@@ -11,9 +11,10 @@ const Feature = (props) => {
 };
 
 const Container = styled.main`
-  min-width: 100vw;
+
+overflow-x: hidden !important;
+  min-width: 100%;
   min-height: 100vh;
-  overflow-x: hidden;
   display: flex;
   flex-direction : column;
   text-align: center;

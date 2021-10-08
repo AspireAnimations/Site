@@ -9,6 +9,7 @@ import Short from './components/Short';
 import Detail from "./components/Detail";
 import Hire from './components/Hire';
 import about from './components/about';
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -42,6 +43,8 @@ function App() {
             <Detail />
           </Route>
         </Switch>
+        
+      <Footer />
       </Router>
     </div>
   );

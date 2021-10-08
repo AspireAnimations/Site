@@ -63,7 +63,6 @@ const Home = (props) => {
       <Anime />
       <App />
       <Creative />
-      <Footer />
     </Container>
   );
 };
