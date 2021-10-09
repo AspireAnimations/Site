@@ -12,4 +12,3 @@ const slider = () => {
     console.log(i);
   }, 2000);
 };
-slide.addEventListener("load", slider());
