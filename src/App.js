@@ -8,7 +8,7 @@ import Feature from './components/Feature';
 import Short from './components/Short';
 import Detail from "./components/Detail";
 import Hire from './components/Hire';
-import about from './components/about';
+import About from './components/About';
 import Footer from './components/Footer'
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
             <Home />
           </Route>
           <Route path='/about'>
-            <about />
+            <About />
           </Route>
           <Route path='/motion'>
             <Motion />

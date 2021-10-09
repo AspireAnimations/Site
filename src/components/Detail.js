@@ -76,6 +76,12 @@ const Container = styled.div`
   padding: 0 calc(3.5vw + 5px);
   margin-bottom : 20rem;
 
+  @media(max-width: 768px) {
+    margin-bottom: 9rem;
+  }
+
+
+
 `;
 
 const Background = styled.div`
@@ -90,10 +96,12 @@ const Background = styled.div`
     width: 100vw;
     height: 100vh;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       width: 100vw;
       margin: 16px 0;
+      margin-top: 4rem;
       background-size: cover;
+      height: 50vh;
     }
   }
 `;
@@ -118,6 +126,14 @@ const ImageTitle = styled.div`
 
 const ContentMeta = styled.div`
   max-width: 874px;
+
+  @media (max-width: 1024px) {
+    margin-top: 50%;
+  }
+
+  @media (max-width: 768px) {
+     margin-top: 50%;
+  }
 `;
 
 const Controls = styled.div`

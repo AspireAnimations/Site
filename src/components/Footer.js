@@ -25,6 +25,7 @@ justify-items: center;
 text-align: center;
 align-items: center;
 flex-grow: 1;
+
 `;
 
 
