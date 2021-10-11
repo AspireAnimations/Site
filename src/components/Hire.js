@@ -11,12 +11,14 @@ const Hire = (props) => {
 		
 			<label for="checkcontact" class="contactbutton"><div class="mail"></div></label><input id="checkcontact" type="checkbox"/>
 	
-			<form name="contact" action="" method="post" class="contactform" data-netlify="true">
+			<form name="contact"   
+      
+      action="" method="post" class="contactform" data-netlify="true">
 				<p class="input_wrapper"><input type="text" name="contact_nom"  id ="contact_nom"/><label for="contact_nom">NAME</label></p>
 				<p class="input_wrapper"><input type="text" name="contact_email"  id ="contact_email"/><label for="contact_email">EMAIL</label></p>
 				<p class="input_wrapper"><input type="text" name="contact_sujet" id ="contact_sujet"/><label for="contact_sujet">SUBJECT</label></p>
 				<p class="textarea_wrapper"><textarea name="contact_message" id="contact_message"></textarea></p>
-				<p class="submit_wrapper"><input type="submit" value="ENVOYER"/></p>			
+				<p class="submit_wrapper"><input type="submit" value="Send"/></p>			
 			</form>
 	</article>
 </section>
@@ -47,6 +49,10 @@ const Container = styled.main`
     inset: 0px;
     opacity: 1;
     z-index: -10;
+  }
+
+  @media(max-height: 700px) {
+    margin-top: 5rem;
   }
 
   
