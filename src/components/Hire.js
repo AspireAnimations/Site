@@ -51,7 +51,7 @@ const Container = styled.main`
     z-index: -10;
   }
 
-  @media(max-height: 700px) {
+  @media(min-width: 1000px) {
     margin-top: 5rem;
   }
 
