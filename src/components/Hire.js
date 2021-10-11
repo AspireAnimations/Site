@@ -11,12 +11,12 @@ const Hire = (props) => {
 		
 			<label for="checkcontact" class="contactbutton"><div class="mail"></div></label><input id="checkcontact" type="checkbox"/>
 	
-			<form name="contact-form" method="POST" data-netlify="true" class="contactform" >
-        <input type="hidden" name="form-name" value="contact-form" />
-				<p class="input_wrapper"><input type="text" name="name"  id ="contact_nom"/><label for="contact_nom">NAME</label></p>
-				<p class="input_wrapper"><input type="text" name="email"  id ="contact_email"/><label for="contact_email">EMAIL</label></p>
-				<p class="input_wrapper"><input type="text" name="sujet" id ="contact_sujet"/><label for="contact_sujet">SUBJECT</label></p>
-				<p class="textarea_wrapper"><textarea name="message" id="contact_message"></textarea></p>
+			<form name="contact" method="POST" data-netlify="true" class="contactform" action="/hire" >
+        <input type="hidden" name="form-name" value="contact" />
+				<p class="input_wrapper"><input required type="text" name="name"  id ="contact_nom"/><label for="contact_nom">NAME</label></p>
+				<p class="input_wrapper"><input required type="text" name="email"  id ="contact_email"/><label for="contact_email">EMAIL</label></p>
+				<p class="input_wrapper"><input required type="text" name="sujet" id ="contact_sujet"/><label for="contact_sujet">SUBJECT</label></p>
+				<p class="textarea_wrapper"><textarea required name="message" id="contact_message"></textarea></p>
 				<p class="submit_wrapper"><input type="submit" value="Send"/></p>			
 			</form>
 	</article>
