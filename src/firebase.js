@@ -2,12 +2,13 @@ import firebase from "firebase";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAzxqPotmOa4OxS1z-LduQH3SgFDCGzt0w",
-  authDomain: "disneyclone-cb5e9.firebaseapp.com",
-  projectId: "disneyclone-cb5e9",
-  storageBucket: "disneyclone-cb5e9.appspot.com",
-  messagingSenderId: "851998774980",
-  appId: "1:851998774980:web:bcde7861f94b99ecb41b91"
+  apiKey: "AIzaSyAb3k4rJmqaluFo1KRIIl3xczjs_yb0zAY",
+  authDomain: "aspire-animations-22ec2.firebaseapp.com",
+  projectId: "aspire-animations-22ec2",
+  storageBucket: "aspire-animations-22ec2.appspot.com",
+  messagingSenderId: "803744554362",
+  appId: "1:803744554362:web:36622293d3022d293e8ac3",
+  measurementId: "G-QDNQ2V2GE7"
 };
 
 
